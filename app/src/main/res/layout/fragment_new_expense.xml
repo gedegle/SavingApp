@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutExpense"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99ECECF8">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutExpense"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:layout_weight="2"
+        android:background="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="Add expense"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textGrid4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="Expense amount"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#FFFEFE"
+                app:boxBackgroundColor="#00FFFFFF"
+                app:boxStrokeColor="#F8F6F6"
+                app:hintEnabled="false"
+                app:passwordToggleTint="#FBFAFA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:hint="40"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#6BD6BFFC"
+                    android:textColorHint="#48F4F1F1"
+                    android:textColorLink="#FBF9F9"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textIsSelectable="false"
+                    android:textSize="50sp"
+                    android:theme="@style/EditTextHandles" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayoutExpense">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_input"
+                    app:cardCornerRadius="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="0sp"
+                        android:fadingEdge="none"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="bottom"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="10dp"
+                            android:text="Expense type"
+                            android:textColor="#540A78"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-4dp"
+                            android:layout_weight="1"
+                            android:baselineAligned="true"
+                            android:gravity="top"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:requiresFadingEdge="none"
+                            android:textColorHint="#825B95"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="none"
+                            app:boxStrokeColor="#00FFFFFF"
+                            app:boxStrokeWidth="0dp"
+                            app:hintEnabled="false">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/typeInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shape"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="ex. Food"
+                                android:inputType="text"
+                                android:paddingRight="20dp"
+                                android:singleLine="true"
+                                android:textColor="#825B95"
+                                android:theme="@style/EditTextHandles" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/text_input"
+                    app:cardCornerRadius="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="0sp"
+                        android:fadingEdge="none"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:id="@+id/dateName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="bottom"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="10dp"
+                            android:text="Date"
+                            android:textColor="#540A78"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-4dp"
+                            android:layout_weight="1"
+                            android:baselineAligned="true"
+                            android:gravity="top"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:requiresFadingEdge="none"
+                            android:textColorHint="#825B95"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="none"
+                            app:boxStrokeColor="#00FFFFFF"
+                            app:boxStrokeWidth="0dp"
+                            app:hintEnabled="false">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dateInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shape"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="ex. 2020-12-12"
+                                android:inputType="date"
+                                android:paddingRight="20dp"
+                                android:singleLine="true"
+                                android:textColor="#825B95"
+                                android:theme="@style/EditTextHandles" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/discard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_round_discard"
+                        android:fontFamily="sans-serif-black"
+                        android:stateListAnimator="@null"
+                        android:text="Discard"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_round_confirm"
+                        android:fontFamily="sans-serif-medium"
+                        android:stateListAnimator="@null"
+                        android:text="Confirm"
+                        android:textColor="#F43646"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

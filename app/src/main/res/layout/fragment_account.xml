@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99ECECF8">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:layout_weight="2"
+        android:background="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="100dp"
+            app:srcCompat="@drawable/ic_user_image" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/text_input"
+                        app:cardCornerRadius="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:elevation="0sp"
+                            android:fadingEdge="none"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-4dp"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:paddingLeft="20dp"
+                                android:paddingBottom="5dp"
+                                android:textColorHint="#825B95"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="none"
+                                app:boxStrokeColor="#00FFFFFF"
+                                app:boxStrokeWidth="0dp"
+                                app:hintEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/emailInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shape"
+                                    android:fontFamily="sans-serif-light"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingRight="25dp"
+                                    android:singleLine="true"
+                                    android:textColor="#321688"
+                                    android:textColorHint="#BF251260"
+                                    android:theme="@style/EditTextHandles" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/text_input"
+                        app:cardCornerRadius="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:elevation="0sp"
+                            android:fadingEdge="none"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-4dp"
+                                android:layout_weight="1"
+                                android:baselineAligned="true"
+                                android:gravity="top"
+                                android:paddingLeft="20dp"
+                                android:paddingBottom="5dp"
+                                android:requiresFadingEdge="none"
+                                android:textColorHint="#825B95"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="none"
+                                app:boxStrokeColor="#00FFFFFF"
+                                app:boxStrokeWidth="0dp"
+                                app:hintEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/nameInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shape"
+                                    android:fontFamily="sans-serif-light"
+                                    android:paddingRight="20dp"
+                                    android:singleLine="true"
+                                    android:textColor="#321688"
+                                    android:textColorHint="#BF251260"
+                                    android:theme="@style/EditTextHandles" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Change password"
+                        android:textColor="#422A9A"
+                        android:textSize="20sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/text_input"
+                        app:cardCornerRadius="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:elevation="0sp"
+                            android:fadingEdge="none"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-4dp"
+                                android:layout_weight="1"
+                                android:baselineAligned="true"
+                                android:gravity="top"
+                                android:paddingLeft="20dp"
+                                android:paddingBottom="5dp"
+                                android:requiresFadingEdge="none"
+                                android:textColorHint="#825B95"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="none"
+                                app:boxStrokeColor="#00FFFFFF"
+                                app:boxStrokeWidth="0dp"
+                                app:hintEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/pass2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shape"
+                                    android:fontFamily="sans-serif-light"
+                                    android:hint="New password"
+                                    android:inputType="textPassword"
+                                    android:paddingRight="20dp"
+                                    android:singleLine="true"
+                                    android:textColor="#825B95"
+                                    android:theme="@style/EditTextHandles" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/text_input"
+                        app:cardCornerRadius="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:elevation="0sp"
+                            android:fadingEdge="none"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-4dp"
+                                android:layout_weight="1"
+                                android:baselineAligned="true"
+                                android:gravity="top"
+                                android:paddingLeft="20dp"
+                                android:paddingBottom="5dp"
+                                android:requiresFadingEdge="none"
+                                android:textColorHint="#825B95"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="none"
+                                app:boxStrokeColor="#00FFFFFF"
+                                app:boxStrokeWidth="0dp"
+                                app:hintEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/pass1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shape"
+                                    android:fontFamily="sans-serif-light"
+                                    android:hint="Current password"
+                                    android:inputType="textPassword"
+                                    android:paddingRight="20dp"
+                                    android:singleLine="true"
+                                    android:textColor="#825B95"
+                                    android:theme="@style/EditTextHandles" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Notification settings"
+                        android:textColor="#422A9A"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="0sp"
+                        android:fadingEdge="none"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp">
+
+                        <CheckBox
+                            android:id="@+id/isNotificationsActive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:text="Send reminder notifications"
+                            android:textColor="#5C5959" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:text="Notification repeat period in hours"
+                            android:textSize="16sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/text_input"
+                            app:cardCornerRadius="50dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:elevation="0sp"
+                                android:fadingEdge="none"
+                                android:orientation="horizontal"
+                                android:paddingTop="20dp">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_weight="1"
+                                    android:baselineAligned="true"
+                                    android:gravity="top"
+                                    android:paddingLeft="20dp"
+                                    android:paddingBottom="5dp"
+                                    android:requiresFadingEdge="none"
+                                    android:textColorHint="#825B95"
+                                    app:boxBackgroundColor="#00FFFFFF"
+                                    app:boxBackgroundMode="none"
+                                    app:boxStrokeColor="#00FFFFFF"
+                                    app:boxStrokeWidth="0dp"
+                                    app:hintEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/notifRepeat"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/shape"
+                                        android:fontFamily="sans-serif-light"
+                                        android:hint="ex. 1"
+                                        android:inputType="number|numberDecimal"
+                                        android:paddingRight="20dp"
+                                        android:singleLine="true"
+                                        android:textColor="#825B95"
+                                        android:theme="@style/EditTextHandles" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/saveChanges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_round_confirm"
+                            android:fontFamily="sans-serif-medium"
+                            android:stateListAnimator="@null"
+                            android:text="Save changes"
+                            android:textColor="#F43646"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar3"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:layout_gravity="bottom"
+        android:clickable="false"
+        app:backgroundTint="#F8F8F8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+
+        tools:ignore="BottomAppBar,UnknownId"></com.google.android.material.bottomappbar.BottomAppBar>
+
+    <ImageButton
+        android:id="@+id/accBtn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="17dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addNew"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_user" />
+
+    <ImageButton
+        android:id="@+id/addNew"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar3"
+        app:layout_constraintVertical_bias="0.476"
+        app:srcCompat="@drawable/ic_plus" />
+
+    <ImageButton
+        android:id="@+id/homeBtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="17dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addNew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
